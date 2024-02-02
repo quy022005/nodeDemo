@@ -1,0 +1,81 @@
+
+
+
+
+.checkbox-select-all-options{
+    width: 140px;
+    margin: 0 16px;
+}
+// làm mờ khóa học khi hover
+.overlay {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+.overlay:hover {
+opacity: 0.6; /* Làm mờ ảnh khi hover */
+}
+
+.overlay-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #fff;
+font-size: 1.2rem;
+text-align: center;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+.overlay:hover .overlay-text {
+opacity: 1; /* Hiện chữ khi hover */
+}
+.text-decoration-none:hover{
+    text-decoration: none;
+}
+//courses/:slug(show.handlebars)-> custom btn
+.button-group {
+    margin-bottom: 10px;
+    margin-left: 350px;
+    border-radius: 50%;
+    
+  }
+  
+
+
+.button-group .like-button {
+color: #000;
+background-color: #fff;
+
+}
+
+.button-group .dislike-button {
+color: #000;
+background-color: #fff;
+}
+
+.button-group .share-button {
+color: #000;
+background-color: #fff;
+}
+.like-button:not(:disabled):not(.disabled).active:focus, .like-button:not(:disabled):not(.disabled):active:focus, .show>.like-button.dropdown-toggle:focus{
+    box-shadow: none;
+}
+.dislike-button:not(:disabled):not(.disabled).active:focus, .dislike-button:not(:disabled):not(.disabled):active:focus, .show>.dislike-button.dropdown-toggle:focus{
+    box-shadow: none;
+}
+.share-button:not(:disabled):not(.disabled).active:focus, .share-button:not(:disabled):not(.disabled):active:focus, .show>.share-button.dropdown-toggle:focus{
+    box-shadow: none;
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
+  
+
+  
+  
+

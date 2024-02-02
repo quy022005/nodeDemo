@@ -1,0 +1,55 @@
+<div class="mt-4">
+    <div class="row">
+        <div class="col-lg-3">
+            <button>study now</button>
+        </div>
+        <div class="col-lg-9 ">
+            <h2>{{course.name}}</h2>
+            <iframe width="560" height="315" src="{{course.videoId}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p>{{course.description}}</p>
+            <div class="btn-group button-group">
+                <button type="button" class="btn btn-primary btn-sm like-btn like-button">
+                    <i class="bi bi-hand-thumbs-up"></i> Like
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm dislike-btn dislike-button">
+                    <i class="bi bi-hand-thumbs-down"></i> Dislike
+                </button>
+                <button type="button" class="btn btn-info btn-sm share-btn share-button">
+                    <i class="bi bi-share"></i> Share
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+    $(".like-button").click(function() {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this).find("i").removeClass("bi-hand-thumbs-up-fill").addClass("bi-hand-thumbs-up"); // Bỏ icon like
+      } else {
+        $(this).addClass("active");
+        $(this).find("i").removeClass("bi-hand-thumbs-up").addClass("bi-hand-thumbs-up-fill"); // Thêm icon like
+        $(".dislike-button").removeClass("active");
+        $(".dislike-button").find("i").removeClass("bi-hand-thumbs-down-fill").addClass("bi-hand-thumbs-down"); // Bỏ icon dislike (nếu có)
+      }
+    });
+
+    $(".dislike-button").click(function() {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this).find("i").removeClass("bi-hand-thumbs-down-fill").addClass("bi-hand-thumbs-down"); // Bỏ icon dislike
+      } else {
+        $(this).addClass("active");
+        $(this).find("i").removeClass("bi-hand-thumbs-down").addClass("bi-hand-thumbs-down-fill"); // Thêm icon dislike
+        $(".like-button").removeClass("active");
+        $(".like-button").find("i").removeClass("bi-hand-thumbs-up-fill").addClass("bi-hand-thumbs-up"); // Bỏ icon like (nếu có)
+      }
+    });
+  });
+    
+
+</script>
